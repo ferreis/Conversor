@@ -2,23 +2,24 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+import Conversor from "./components/Conversor";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello world!</p>
-        <p>Vamos contar:</p>
-        <button>Contar</button>
-        <a
-          className="App-link"
-          href="http://pudim.com.br/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          pudim
-        </a>
-      </header>
+      <h1>Conversor de moedas</h1>
+      <div className="linha">
+        <Conversor moedaA="USD" moedaB="BRL"></Conversor>
+        <Conversor moedaA="BRL" moedaB="USD"></Conversor>
+      </div>
+      <div className="linha">
+        <Conversor moedaA="CAD" moedaB="BRL"></Conversor>
+        <Conversor moedaA="BRL" moedaB="CAD"></Conversor>
+      </div>
+      <div className="linha">
+        <Conversor moedaA="EUR" moedaB="BRL"></Conversor>
+        <Conversor moedaA="BRL" moedaB="EUR"></Conversor>
+      </div>
     </div>
   );
 }
